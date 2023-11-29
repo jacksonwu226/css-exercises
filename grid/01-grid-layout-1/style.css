@@ -46,3 +46,32 @@ html {
   color: white;
   text-align: left;
 }
+
+.container{
+  display: grid;
+  grid-template-rows: var(--row-size) var(--row-size) calc(var(--row-size)*4) var(--row-size) ;
+  grid-template-columns: var(--col-size) calc(var(--col-size) * 3);
+  gap: 15px;
+
+}
+:root{
+  --row-size: 120px;
+  --col-size: 300px;
+}
+.header{
+  grid-area: 1 / 1 / 2 / 3;  
+}
+.sidebar{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.nav .article{
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.footer{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
